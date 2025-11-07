@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/interest.css">
+    <title>AI Engineer</title>
+</head>
+
+<body>
+    <a class="back" href="{{ url_for('app_bp.career_page') }}">&larr; Back</a>
+    <section class="parents">
+        <p style="font-family: monospace; font-size: 35px; text-align: center;">AI Engineer</p>
+        <div class="student-container">
+            {% for s in student %}
+            <div class="student-card">
+                <img src="{{ url_for('static', filename=s['picture']) }}" alt="{{ s['name'] }}'s picture">
+                <div class="student-info">
+                    <h2>{{ s['name'] }}</h2>
+                    <p>{{ s['course'] }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+
+</html>

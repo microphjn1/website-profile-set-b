@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Edit {{ student['name'] }}</title>
+  <link rel="stylesheet" href="../static/css/edit.css">
+</head>
+
+<body>
+  <a class="back" href="{{ url_for('app_bp.profile', student_id=student_id) }}">&larr;</a>
+  <div class="container">
+    <div class="header">
+      <h2>Edit {{ student['name'] }}</h2>
+    </div>
+    <form method="POST" enctype="multipart/form-data" class="form">
+      <label>Name (Last, First Middle):</label>
+      <input name="name" value="{{ student['name'] }}" required>
+      <label>Course:</label>
+      <input name="course" value="{{ student['course'] }}">
+      <label>Hobbies:</label>
+      <input name="hobbies" value="{{ student['hobbies'] }}">
+      <label>Programming Languages Used:</label>
+      <input name="languages" value="{{ student['languages'] }}">
+      <label>Motto / Quote:</label>
+      <input name="motto" value="{{ student['motto'] }}">
+      <label>Career interests:</label>
+      <fieldset class="chek">
+        <legend>Select your preferred careers</legend>
+        <label><input type="checkbox" name="career" value="Software" {% if 'Software' in (student['career_interests'] or '') %}checked{% endif %}> Software/Web Developer</label>
+        <label><input type="checkbox" name="career" value="Cyber" {% if 'Cyber' in (student['career_interests'] or '') %}checked{% endif %}> Cyber Security Analyst</label>
+        <label><input type="checkbox" name="career" value="IT Support" {% if 'IT Support' in (student['career_interests'] or '') %}checked{% endif %}> IT Support Specialist</label>
+        <label><input type="checkbox" name="career" value="Business" {% if 'Business' in (student['career_interests'] or '') %}checked{% endif %}> IT Business Analyst</label>
+        <label><input type="checkbox" name="career" value="DevOps" {% if 'DevOps' in (student['career_interests'] or '') %}checked{% endif %}> DevOps Engineer</label>
+        <label><input type="checkbox" name="career" value="Database" {% if 'Database' in (student['career_interests'] or '') %}checked{% endif %}> Database Administrator</label>
+        <label><input type="checkbox" name="career" value="Cloud" {% if 'Cloud' in (student['career_interests'] or '') %}checked{% endif %}> Cloud Engineer</label>
+        <label><input type="checkbox" name="career" value="Designer" {% if 'Designer' in (student['career_interests'] or '') %}checked{% endif %}> UI/UX Designer</label>
+        <label><input type="checkbox" name="career" value="Tester" {% if 'Tester' in (student['career_interests'] or '') %}checked{% endif %}> QA Tester</label>
+        <label><input type="checkbox" name="career" value="Data Analyst" {% if 'Data Analyst' in (student['career_interests'] or '') %}checked{% endif %}> Data Analyst</label>
+        <label><input type="checkbox" name="career" value="AI" {% if 'AI' in (student['career_interests'] or '') %}checked{% endif %}> AI Engineer</label>
+        <label><input type="checkbox" name="career" value="Data Scientist" {% if 'Data Scientist' in (student['career_interests'] or '') %}checked{% endif %}> Data Scientist</label>
+        <label><input type="checkbox" name="career" value="Mobile" {% if 'Mobile' in (student['career_interests'] or '') %}checked{% endif %}> Mobile App Developer</label>
+        <label><input type="checkbox" name="career" value="Consultant" {% if 'Consultant' in (student['career_interests'] or '') %}checked{% endif %}> IT Consultant</label>
+        <label><input type="checkbox" name="career" value="Administrator" {% if 'Administrator' in (student['career_interests'] or '') %}checked{% endif %}> Data Administrator</label>
+      </fieldset>
+      <label>Reason why BSIT:</label>
+      <textarea name="reason">{{ student['reason'] }}</textarea>
+      <label>Change Picture:</label>
+      <input class="picture" type="file" name="picture" accept="image/*">
+      <div class="form-actions">
+        <button class="btn" type="submit">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

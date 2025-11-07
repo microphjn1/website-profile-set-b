@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Student Information</title>
+</head>
+
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="nav-item logo">
+                <img src="{{ url_for('static', filename='image/icct.png') }}" alt="ICCT Logo">
+            </div>
+
+            <div class="navs-item career">
+                <a href="{{ url_for('app_bp.career_page') }}">
+                    <i class='bx bx-briefcase'></i>
+                    <span>Career</span>
+                </a>
+            </div>
+
+            <div class="navs-item about">
+                <a href="{{ url_for('app_bp.gallery') }}">
+                    <i class='bx bx-image'></i>
+                    <span>Gallery</span>
+                </a>
+            </div>
+
+            <div class="navs-item about">
+                <a href="{{ url_for('app_bp.about') }}">
+                    <i class='bx bx-info-circle'></i>
+                    <span>About Us</span>
+                </a>
+            </div>
+        </header>
+    </nav>
+
+    <div class="main">
+        <form action="{{ url_for('app_bp.home_page') }}" method="get" class="search">
+            <span class="material-symbols-outlined">search</span>
+            <!-- value is set from the template variable 'query' (passed from view) -->
+            <input type="text" name="query" placeholder="Search" value="{{ query }}">
+        </form>
+    </div>
+
+    <div class="Student-info">
+        <div class="class-info">
+            <p>Class Information</p>
+            <button><a class="btn" href="{{ url_for('app_bp.add_student') }}">+ Add Student</a></button>
+        </div>
+
+        <div class="student-grid" id="studentGrid">
+            {% for id, student in students.items() %}
+            <div class="student-card">
+                <a href="{{ url_for('app_bp.profile', student_id=id) }}">
+                    {% set pic = student['picture'] if '/' in student['picture'] else 'uploads/' ~ student['picture'] %}
+                    <img src="{{ url_for('static', filename=pic) }}"
+                        alt="{{ student['name'] }}'s picture">
+                    <p class="name">{{ student['name'] }}</p>
+                    <p class="small">{{ student['course'] }}</p>
+                </a>
+            </div>
+            {% else %}
+            <p>No students yet. Please add one above 👆.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

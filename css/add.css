@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+    color: #222;
+    margin: 0;
+    padding: 20px;
+}
+
+.form {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 700px;
+    padding: 30px;
+    border: 2px solid rgba(99, 95, 95, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.form label {
+    display: block;
+    margin-top: 10px;
+    color: #444;
+    font-weight: 600;
+}
+
+.form input[type=text],
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+.form-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #555;
+    text-decoration: none;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.chek {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 6px 16px;
+}
+
+.chek label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.chek input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #007bff;
+}

@@ -1,0 +1,15 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   static/css/about.css
+#	modified:   static/css/gallery.css
+#	new file:   static/js/app.js
+#	deleted:    templates/__pycache__/app.cpython-313.pyc
+#	modified:   templates/about.html
+#	modified:   templates/gallery.html
+#

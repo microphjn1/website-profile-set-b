@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/gallery.css">
+</head>
+
+<body>
+    <header>
+        <a class="back" href="{{ url_for('app_bp.home_page') }}">&larr; Back</a>
+        <ul class="menu">
+            <li></li>
+            <li>Gallery</li>
+            <li>Info</li>
+        </ul>
+    </header>
+    <div class="slider">
+        <div class="list">
+            <div class="item active">
+                <img src="{{ url_for('static', filename='image/1p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/2p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/3p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/4p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/5p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/6p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/7p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item active">
+                <img src="{{ url_for('static', filename='image/8p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/9p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/10p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/11p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/12p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/13p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/14p.jpg') }}">
+                <div class="content">
+                    <p>LFCA211M062</p>
+                    <h2>Set B</h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="arrows">
+            <button id="prev">
+                < </button>
+                    <button id="next">></button>
+        </div>
+        <div class="thumbnail">
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/1p.jpg') }}">
+                <div class="content"> </div>
+            </div>
+
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/2p.jpg') }}">
+                <div class="content"> </div>
+            </div>
+
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/3p.jpg') }}">
+                <div class="content"> </div>
+            </div>
+
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/4p.jpg') }}">
+                <div class="content"> </div>
+            </div>
+
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/5p.jpg') }}">
+                <div class="content"> </div>
+            </div>
+
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/6p.jpg') }}">
+                <div class="content"> </div>
+            </div>
+
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/7p.jpg') }}">
+                <div class="content"> </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/8p.jpg') }}">
+                <div class="content">
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/9p.jpg') }}">
+                <div class="content">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/10p.jpg') }}">
+                <div class="content">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/11p.jpg') }}">
+                <div class="content">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/12p.jpg') }}">
+                <div class="content">
+
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/13p.jpg') }}">
+                <div class="content">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/14p.jpg') }}">
+                <div class="content">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

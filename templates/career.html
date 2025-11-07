@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/career.css">
+    <title>Career Interest</title>
+</head>
+
+<body>
+    <a class="back" href="{{ url_for('app_bp.home_page') }}">&larr; Back</a>
+    <p class="head">Career Interest</p>
+    <section class="parents">
+        <div class="child_1">
+            <div class="box" id="coding">
+                <a href="{{ url_for('app_bp.software') }}">
+                    <img src="{{ url_for('static', filename='image/coding.gif') }}" alt=""></a>
+                <p>Software/Web Developer</p>
+            </div>
+            <div class="box" id="database">
+                <a href="{{ url_for('app_bp.data_base') }}">
+                    <img src="{{ url_for('static', filename='image/database.gif') }}" alt=""></a>
+                <p>Database Administrator</p>
+            </div>
+            <div class="box" id="ai">
+                <a href="{{ url_for('app_bp.ai') }}">
+                    <img class="ai" src="{{ url_for('static', filename='image/artificial-intelligence.gif') }}"
+                        alt=""></a>
+                <p>AI Engineer</p>
+            </div>
+        </div>
+        <div class="child_2">
+            <div class="box">
+                <a href="{{ url_for('app_bp.cyber') }}">
+                    <img src="{{ url_for('static', filename='image/data-safety.gif') }}" alt=""></a>
+                <p>Cyber Security Analyst</p>
+            </div>
+            <div class="box">
+                <a href="{{ url_for('app_bp.cloud') }}">
+                    <img src="{{ url_for('static', filename='image/cloud.gif') }}" alt=""></a>
+                <p>Cloud Engineer</p>
+            </div>
+            <div class="box">
+                <a href="{{ url_for('app_bp.data_scientist') }}">
+                    <img src="{{ url_for('static', filename='image/analysis.gif') }}" alt=""></a>
+                <p>Data Scientist</p>
+            </div>
+        </div>
+        <div class="child_3">
+            <div class="box">
+                <a href="{{ url_for('app_bp.support') }}">
+                    <img src="{{ url_for('static', filename='image/headphones-with-wrench.gif') }}" alt=""></a>
+                <p>IT Support Specialist</p>
+            </div>
+            <div class="box">
+                <a href="{{ url_for('app_bp.designer') }}">
+                    <img src="{{ url_for('static', filename='image/ux-design.gif') }}" alt=""></a>
+                <p>UI/UX Designer</p>
+            </div>
+            <div class="box">
+                <a href="{{ url_for('app_bp.mobile') }}">
+                    <img src="{{ url_for('static', filename='image/mobile-phone.gif') }}" alt=""></a>
+                <p>Mobile App Developer</p>
+            </div>
+        </div>
+        <div class="child_4">
+            <div class="box">
+                <a href="{{ url_for('app_bp.business') }}">
+                    <img src="{{ url_for('static', filename='image/business-plan.gif') }}" alt=""></a>
+                <p>IT Business Analyst</p>
+            </div>
+            <div class="box">
+                <a href="{{ url_for('app_bp.tester') }}">
+                    <img src="{{ url_for('static', filename='image/QA_Tester.gif') }}" alt=""></a>
+                <p>QA Tester</p>
+            </div>
+            <div class="box">
+                <a href="{{ url_for('app_bp.consultant') }}">
+                    <img src="{{ url_for('static', filename='image/IT_Consultant.gif') }}" alt=""></a>
+                <p>IT Consultant</p>
+            </div>
+        </div>
+        <div class="child_5">
+            <div class="box">
+                <a href="{{ url_for('app_bp.Devops') }}">
+                    <img src="{{ url_for('static', filename='image/DevOps.gif') }}" alt=""></a>
+                <p>DevOps Engineer</p>
+            </div>
+            <div class="box">
+                <a href="{{ url_for('app_bp.analyst') }}">
+                    <img src="{{ url_for('static', filename='image/data_analyst.gif') }}" alt=""></a>
+                <p>Data Anaylst</p>
+            </div>
+            <div class="box">
+                <a href="{{ url_for('app_bp.Administrator') }}">
+                    <img src="{{ url_for('static', filename='image/data_administrator.gif') }}" alt=""></a>
+                <p>Data Administrator</p>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

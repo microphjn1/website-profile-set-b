@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Add Student</title>
+  <link rel="stylesheet" href="../static/css/add.css">
+</head>
+
+<body>
+  <a class="back" href="{{ url_for('app_bp.home_page') }}">&larr; Back</a>
+  <h2>Add Student</h2>
+  <form method="POST" enctype="multipart/form-data" class="form">
+    <label>Name (Last, First Middle):</label>
+    <input name="name" required>
+    <label>Course:</label>
+    <input name="course">
+    <label>Hobbies:</label>
+    <input name="hobbies">
+    <label>Programming Languages Used:</label>
+    <input name="languages">
+    <label>Motto / Quote:</label>
+    <input name="motto">
+    <label>Career Interests:</label>
+    <label for="career-select">Choose a career</label>
+    <fieldset class="chek">
+      <legend>Select your preferred careers</legend>
+  <label><input type="checkbox" name="career" value="Software"> Software/Web Developer</label>
+  <label><input type="checkbox" name="career" value="Cyber"> Cyber Security Analyst</label>
+  <label><input type="checkbox" name="career" value="IT Support"> IT Support Specialist</label>
+  <label><input type="checkbox" name="career" value="Business"> IT Business Analyst</label>
+  <label><input type="checkbox" name="career" value="DevOps"> DevOps Engineer</label>
+  <label><input type="checkbox" name="career" value="Database"> Database Administrator</label>
+  <label><input type="checkbox" name="career" value="Cloud"> Cloud Engineer</label>
+  <label><input type="checkbox" name="career" value="Designer"> UI/UX Designer</label>
+  <label><input type="checkbox" name="career" value="Tester"> QA Tester</label>
+  <label><input type="checkbox" name="career" value="Data Analyst"> Data Analyst</label>
+  <label><input type="checkbox" name="career" value="AI"> AI Engineer</label>
+  <label><input type="checkbox" name="career" value="Data Scientist"> Data Scientist</label>
+  <label><input type="checkbox" name="career" value="Mobile"> Mobile App Developer</label>
+  <label><input type="checkbox" name="career" value="Consultant"> IT Consultant</label>
+  <label><input type="checkbox" name="career" value="Administrator"> Data Administrator</label>
+    </fieldset>
+    <label>Reason why BSIT:</label>
+    <textarea name="reason"></textarea>
+    <label>Picture (optional):</label>
+    <input type="file" name="picture" accept="image/*">
+    <div style="margin-top:10px;">
+      <button class="btn" type="submit">Add Student</button>
+    </div>
+  </form>
+</body>
+
+</html>

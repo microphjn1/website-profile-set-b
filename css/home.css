@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "poppins";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* SIDEBAR SECTION */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100%;
+    border-radius: 0px 45px 45px 0px;
+    background-color: #1E21DE;
+    box-shadow: 3px 0px 8px 3px rgba(0, 0, 0, 0.75);
+    transition: width 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar .logo img {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 50%;
+}
+
+.navs-item {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.navs-item a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.navs-item a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.navs-item i {
+    font-size: 25px;
+}
+
+.navs-item span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .navs-item span {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* MAIN SECTION */
+
+.main {
+    margin-top: 24px;
+    justify-items: center;
+    display: flex;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.btn {
+    background: transparent;
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+}
+
+.search {
+    width: 100%;
+    max-width: 900px;
+    background-color: #6E6FC0;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-left: 80px;
+    opacity: .5;
+    transition: all 0.4s ease;
+}
+
+.sidebar:hover~.main .search {
+    opacity: 5;
+    transition: all 0.10s ease;
+}
+
+.search input {
+    background: transparent;
+    flex: 1;
+    border: none;
+    outline: 0;
+    padding: 8px 5px;
+    font-size: 17px;
+}
+
+.material-symbols-outlined {
+    color: white;
+}
+
+
+input::placeholder {
+    color: white;
+    padding-left: 5px;
+}
+
+/* STUDENT INFORMATION SECTION */
+
+.Student-info {
+    display: grid;
+    gap: 10px 10px;
+    align-items: center;
+    margin-left: 80px;
+    border: 0px solid #e4d6d6;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 10px 1px 10px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    max-width: 94%;
+}
+
+.class-info {
+    display: flex;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.class-info p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.class-info button {
+    max-width: 160px;
+    padding-left: 10px;
+    padding-right: 4px;
+    font-weight: 600;
+    height: 40px;
+    width: 150px;
+    margin-left: 80%;
+    margin-top: 24px;
+    background-color: #1E21DE;
+    border: 0;
+    outline: 0;
+    border-radius: 50px;
+}
+
+
+
+
+
+/* Student Grid */
+.student-grid {
+    display: grid;
+    gap: 1em;
+    margin-top: 20px;
+
+}
+
+/* Student Card */
+.student-card {
+    display: grid;
+    width: 200px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+}
+
+.student-card img {
+    width: 111px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 6fr));
+    gap: 20px;
+    border: 0px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    background: #fff;
+
+}
+
+.student-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.name {
+    font-size: 14px;
+}
+
+.small {
+    color: gray;
+    font-family: "poppins";
+    font-size: 12px;
+}
+
+
+.student-card a:hover {
+    text-decoration: underline;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item_career {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.nav-item_career img {
+    width: 50%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.nav-item_career img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
